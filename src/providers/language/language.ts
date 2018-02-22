@@ -76,9 +76,9 @@ export class LanguageProvider {
     this.configProvider.set({ wallet: { settings: { defaultLanguage: lang } } });
   }
 
-  public getName(lang: string): string {
+  public getName(isoCode: string): string {
     return _.result(_.find(this.languages, {
-      'isoCode': lang
+      'isoCode': isoCode
     }), 'name');
   }
 
