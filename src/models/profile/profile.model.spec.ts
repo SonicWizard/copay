@@ -26,6 +26,12 @@ describe('Profile Model', () => {
   it('should check to see if the profile has a wallet', () => {
     let hasWallet = profile.hasWallet(null);
 
-    expect(hasWallet).toEqual(false);
+    expect(hasWallet).toBe(false);
+  });
+
+  it('should delete a wallet', () => {
+    let deleted = profile.deleteWallet(null);
+
+    expect(deleted).toBe(false);
   });
 });
