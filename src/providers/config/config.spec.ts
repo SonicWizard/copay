@@ -41,7 +41,6 @@ describe('Config Provider', () => {
   it('should get cache', inject([ConfigProvider], (configProvider: ConfigProvider) => {
     let cache = configProvider.get();
     expect(cache).not.toBeNull();
-    console.log('cache', cache);
   }));
 
   it('should load', inject([ConfigProvider], (configProvider: ConfigProvider) => {
@@ -50,10 +49,10 @@ describe('Config Provider', () => {
 
   it('should set options with an object', inject([ConfigProvider], (configProvider: ConfigProvider) => {
     let defaults = configProvider.getDefaults();
-    //configProvider.set(defaults);
+    // configProvider.set(defaults);
   }));
 
   it('should set options with a string', inject([ConfigProvider], (configProvider: ConfigProvider) => {
-    //configProvider.set('{"option1":"a","option2":"b"}');
+    // configProvider.set('{"option1":"a","option2":"b"}');
   }));
 });

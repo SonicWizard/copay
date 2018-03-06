@@ -10,7 +10,7 @@ import {
   TranslateFakeLoader
 } from '@ngx-translate/core';
 
-fdescribe('BwcProvider', () => {
+describe('BwcProvider', () => {
   let injector: TestBed;
   let service: BwcProvider;
   let httpMock: HttpTestingController;

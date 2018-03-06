@@ -19,6 +19,7 @@ export class Profile {
     x.credentials = opts.credentials || [];
     x.disclaimerAccepted = false;
     x.checked = {};
+    x.checkedUA = {};
     return x;
   };
 
@@ -40,6 +41,9 @@ export class Profile {
     return this.fromObj(JSON.parse(str));
   };
 
+  /**
+   * TODO rename to toString
+   */
   public toObj(): string {
     delete this.dirty;
     return JSON.stringify(this);
